@@ -8,8 +8,8 @@
  └──────────────────────────────────────────────────────────────┘
 ```
 
-[![Brand: Existential Cloud](https://img.shields.io/badge/Brand-Existential%20Cloud-black?style=for-the-badge&logo=icloud)](https://existentialcloud.ccwu.cc)
-[![Official Portal](https://img.shields.io/badge/Official%20Portal-existentialcloud.ccwu.cc-8A2BE2?style=for-the-badge&logo=cloudflare)](https://existentialcloud.ccwu.cc)
+[![Brand: Existential Cloud](https://img.shields.io/badge/Brand-Existential%20Cloud-black?style=for-the-badge&logo=icloud)](https://www.existentialcloud.ccwu.cc)
+[![Official Portal](https://img.shields.io/badge/Official%20Portal-existentialcloud.ccwu.cc-8A2BE2?style=for-the-badge&logo=cloudflare)](https://www.existentialcloud.ccwu.cc)
 [![Vibe Coder](https://img.shields.io/badge/Stack-Agentic%20Prompting%20%7C%20LLMs-cyan?style=for-the-badge)](https://github.com/VanSchulist)
 [![X / Twitter](https://img.shields.io/badge/Intel%20Source-X%20(Twitter)-blue?style=for-the-badge&logo=x)](https://x.com)
 
