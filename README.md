@@ -25,19 +25,29 @@ At **Existential Cloud**, I:
 
 ---
 
-## 🚀 Flagship Projects
+## 🚀 Flagship & Ecosystem Projects
 
-### 🛡️ [The Career Reboot Armor](https://github.com/VanSchulist/career-reboot-armor)
-*A battle-tested tactical field manual for returning to the US job market after caregiving, illness, or extended leave.*
-* **Origin**: Synthesized from 20+ viral X threads by tech leads and HR screening whistleblowers.
-* **Features**: ATS-proof single-column hybrid resume architecture, 1099 consulting bridge protocol, 30-second interview defensive scripts, and Python `.docx` book generators.
-* **Status**: Production Ready (US Federal Edition).
+### 🌐 [mcp-mesh](https://github.com/VanSchulist/mcp-mesh) `FLAGSHIP`
+*The Dynamic Model Context Protocol Gateway & Lazy Tool Router.*
+* **The Problem**: Connecting coding agents to 10+ MCP servers injects 50+ tool schemas into Turn 0, burning 15k–40k tokens and causing severe model attention drift ("Lost in the Middle").
+* **The Innovation**: Exposes compact meta-tools (`search_tools`, `invoke_tool`) and loads schemas lazily on demand. Zero external dependencies, pure Python stdio multiplexer.
+* **Impact**: Slashes Turn-0 token footprint by 85–95% while supervising upstream child processes.
+* **Status**: Production Release (v1.0.0).
 
-### 👻 [Ghost Job Hunter](https://github.com/VanSchulist/ghost-job-hunter)
+### 🌩️ [Existential Cloud AI Studio](https://github.com/VanSchulist/github-ai-studio) `GOVERNANCE`
+*Central engineering lab, ADRs, research tracker, and multi-agent ecosystem governance.*
+* **Architecture**: The 1 + 3 + N ecosystem model (Flagship + 3 Satellites + Empirical Experiments).
+* **Status**: Active Operations.
+
+### 👻 [Ghost Job Hunter](https://github.com/VanSchulist/ghost-job-hunter) `TACTICAL TOOL`
 *An open-source heuristic engine & CLI for detecting phantom job postings, resume harvesting traps, and corporate hiring theater.*
-* **Origin**: Uncovered from recruiter confession leaks on X and pay transparency evasion loopholes.
 * **Features**: 5 diagnostic heuristic engines, Ghost Probability Index (GPI), zero external dependencies, and automated 1-page Executive Bypass Pitch generation.
 * **Status**: Production Ready (CLI v1.0.0).
+
+### 🛡️ [The Career Reboot Armor](https://github.com/VanSchulist/career-reboot-armor) `TACTICAL MANUAL`
+*A battle-tested tactical field manual for returning to the US job market after caregiving, illness, or extended leave.*
+* **Features**: ATS-proof single-column hybrid resume architecture, 1099 consulting bridge protocol, 30-second interview defensive scripts, and Python `.docx` book generators.
+* **Status**: Production Ready (US Federal Edition).
 
 ---
 
