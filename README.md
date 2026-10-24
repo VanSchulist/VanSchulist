@@ -13,7 +13,6 @@
 [![Vibe Coder](https://img.shields.io/badge/Stack-Agentic%20Prompting%20%7C%20LLMs-cyan?style=for-the-badge)](https://github.com/VanSchulist)
 [![X / Twitter](https://img.shields.io/badge/Intel%20Source-X%20(Twitter)-blue?style=for-the-badge&logo=x)](https://x.com)
 
-
 ---
 
 ## 🌩️ About Existential Cloud
@@ -27,29 +26,44 @@ At **Existential Cloud**, I:
 
 ---
 
-## 🚀 Flagship & Ecosystem Projects
+## 🚀 Flagship & Ecosystem Projects (The 1 + 3 + N Architecture)
 
 ### 🌐 [mcp-mesh](https://github.com/VanSchulist/mcp-mesh) `FLAGSHIP`
 *The Dynamic Model Context Protocol Gateway & Lazy Tool Router.*
 * **The Problem**: Connecting coding agents to 10+ MCP servers injects 50+ tool schemas into Turn 0, burning 15k–40k tokens and causing severe model attention drift ("Lost in the Middle").
-* **The Innovation**: Exposes compact meta-tools (`search_tools`, `invoke_tool`) and loads schemas lazily on demand. Zero external dependencies, pure Python stdio multiplexer.
-* **Impact**: Slashes Turn-0 token footprint by 85–95% while supervising upstream child processes.
+* **The Innovation**: Exposes compact meta-tools (`search_tools`, `invoke_tool`) and loads schemas lazily on demand. Features SQLite telemetry ledger (`~/.mcp-mesh`), threaded watchdog timeout, 3-strike circuit breaker self-healing, and SSE transport.
+* **Impact**: Slashes Turn-0 token footprint by 85–95% with zero external dependencies.
+* **Status**: Production Release (v1.2.0).
+
+### 🕸️ [mcp-mesh-ui](https://github.com/VanSchulist/mcp-mesh-ui) `SATELLITE 2`
+*The Real-Time Topology Visualizer & Observability Dashboard for mcp-mesh.*
+* **Features**: Dark-mode local Web SPA (port 8765, SSE live stream), concentric SVG mesh topology & tool co-occurrence graph, real-time Turn-0 token savings counter, and ANSI terminal live monitor (`tui`).
 * **Status**: Production Release (v1.0.0).
 
-### 🌩️ [Existential Cloud AI Studio](https://github.com/VanSchulist/github-ai-studio) `GOVERNANCE`
-*Central engineering lab, ADRs, research tracker, and multi-agent ecosystem governance.*
-* **Architecture**: The 1 + 3 + N ecosystem model (Flagship + 3 Satellites + Empirical Experiments).
-* **Status**: Active Operations.
+### 📦 [mcp-registry-cli](https://github.com/VanSchulist/mcp-registry-cli) `SATELLITE 3`
+*Zero-Config Community Package Manager & Tool Registry for Model Context Protocol.*
+* **Features**: One-command discovery and multi-client configuration synchronization across Google Antigravity, Claude Desktop, Cursor, and `mcp-mesh`.
+* **Status**: Production Release (v1.1.0).
 
-### 👻 [Ghost Job Hunter](https://github.com/VanSchulist/ghost-job-hunter) `TACTICAL TOOL`
-*An open-source heuristic engine & CLI for detecting phantom job postings, resume harvesting traps, and corporate hiring theater.*
-* **Features**: 5 diagnostic heuristic engines, Ghost Probability Index (GPI), zero external dependencies, and automated 1-page Executive Bypass Pitch generation.
-* **Status**: Production Ready (CLI v1.0.0).
+### 📊 [mcp-mesh-eval](https://github.com/VanSchulist/mcp-mesh-eval) `SATELLITE 1`
+*Empirical Token & Accuracy Benchmark Harness for MCP Tools.*
+* **Features**: Automated benchmark evaluating TTFT latency, tool selection accuracy, and token consumption across 60 enterprise tools on frontier models (GPT-6, Claude 5.5, Gemini 3.8).
+* **Status**: Production Release (v1.0.0).
+
+### 👻 [Ghost Job Hunter](https://github.com/VanSchulist/ghost-job-hunter) `TACTICAL AGENT`
+*Autonomous Anti-Ghost Job Hunting & Direct Outreach Agent powered by mcp-mesh.*
+* **Features**: 5 diagnostic heuristic engines, company GitHub open-source codebase reality audits, candidate proof-of-work matching, and automated Executive Bypass Pitch synthesis.
+* **Status**: Production Ready (Agent v2.0.0).
 
 ### 🛡️ [The Career Reboot Armor](https://github.com/VanSchulist/career-reboot-armor) `TACTICAL MANUAL`
 *A battle-tested tactical field manual for returning to the US job market after caregiving, illness, or extended leave.*
 * **Features**: ATS-proof single-column hybrid resume architecture, 1099 consulting bridge protocol, 30-second interview defensive scripts, and Python `.docx` book generators.
 * **Status**: Production Ready (US Federal Edition).
+
+### 🌩️ [Existential Cloud AI Studio](https://github.com/VanSchulist/github-ai-studio) `GOVERNANCE`
+*Central engineering lab, ADRs, research tracker, and multi-agent ecosystem governance.*
+* **Architecture**: The 1 + 3 + N ecosystem model (Flagship + 3 Satellites + Empirical Experiments).
+* **Status**: Active Operations.
 
 ---
 
