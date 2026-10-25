@@ -1,21 +1,25 @@
 # Van Schulist
 
-> **Building low-latency agent infrastructure, Model Context Protocol gateways, and zero-dependency developer tools. Founder of [Existential Cloud](https://www.existentialcloud.ccwu.cc).**
+> **Systems engineer specializing in low-latency agent infrastructure, Model Context Protocol gateways, and zero-dependency developer tools. Founder of [Existential Cloud](https://www.existentialcloud.ccwu.cc).**
 
 [![Official Portal](https://img.shields.io/badge/Portal-existentialcloud.ccwu.cc-10b981?style=flat-square)](https://www.existentialcloud.ccwu.cc)
 [![Live Simulator](https://img.shields.io/badge/Simulator-GitHub%20Pages-10b981?style=flat-square)](https://vanschulist.github.io/existentialcloud-portal/)
 [![Flagship: mcp-mesh](https://img.shields.io/badge/Flagship-mcp--mesh%20v1.3.0-0ea5e9?style=flat-square)](https://github.com/VanSchulist/mcp-mesh)
-[![Architecture: Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20Stdlib)-zinc?style=flat-square)](https://github.com/VanSchulist/mcp-mesh#architecture)
+[![Architecture: Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20Stdlib)-zinc?style=flat-square)](https://github.com/VanSchulist/mcp-mesh#architecture-decisions--standard-library-rationale)
 [![Test Suite: 100% Pass](https://img.shields.io/badge/Tests-161%2F161%20Passed-10b981?style=flat-square)](https://github.com/VanSchulist/mcp-mesh/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 💡 About Me & Existential Cloud
+## 💡 Engineering Philosophy & Existential Cloud
 
-I'm an American undergraduate computer science student and indie builder. I build pragmatic open-source software designed to eliminate algorithmic friction, prompt bloat, and bureaucratic gatekeeping.
+Modern coding agents are bottlenecked by context-window economics: connecting 6–10 Model Context Protocol (MCP) servers statically dumps 10,000 to 32,000 tokens of heavy JSON schemas into every prompt before the user types a single word.
 
-Modern coding agents are bottlenecked by context bloat: connecting 10 Model Context Protocol (MCP) servers statically dumps 30,000+ tokens of heavy JSON schemas into every prompt before you type a word. At **Existential Cloud**, I engineer zero-dependency developer tools that treat LLM attention windows and local machine resources with absolute discipline.
+At **Existential Cloud**, I engineer zero-dependency developer infrastructure that treats LLM attention windows, process memory, and local compute resources with rigorous discipline:
+
+* **Latency Distribution**: Inverted index keyword lookup $P50 \le 0.8\text{ms}$; subprocess IPC proxying $P50 \le 2.3\text{ms}, P99 \le 3.2\text{ms}$.
+* **Context Efficiency**: Dynamic two-stage resolution slashes Turn-0 prompt bloat from 9,790 tokens to 527 tokens (94.6% reduction).
+* **Pure Standard Library**: 100% standard library Python implementations (`concurrent.futures`, `json`, `sqlite3`, `http.server`, `subprocess`). Zero `pip install` dependency trees, zero supply-chain attack surface.
 
 ```text
  ┌────────────────────────────────────────────────────────────────────────┐
@@ -46,19 +50,19 @@ Modern coding agents are bottlenecked by context bloat: connecting 10 Model Cont
 
 ---
 
-## ⚡ 1-Minute Developer Quickstart
+## ⚡ 10-Second Zero-Install Developer Quickstarts
 
-Federate all your local MCP servers across Claude Desktop, Cursor, and Google Antigravity into a single master connection with zero installation:
+Run live demonstrations directly in your terminal without installing dependencies:
 
 ```bash
-# Start universal heterogeneous federation gateway
-uvx mcp-mesh run --federate
+# 1. One-liner demonstration of mcp-mesh (50 tools across 6 mock MCP servers)
+uvx --from git+https://github.com/VanSchulist/mcp-mesh mcp-mesh --demo
 
-# Test natural language tool search across all workstation servers
-uvx mcp-mesh search "ghost job audit" --federate
+# 2. Start universal heterogeneous federation gateway across Claude, Cursor, and Antigravity
+uvx --from git+https://github.com/VanSchulist/mcp-mesh mcp-mesh run --federate
 
-# View persistent SQLite token economy ledger
-uvx mcp-mesh stats --db
+# 3. Run instant deterministic heuristic audit of phantom job listings
+uvx --from git+https://github.com/VanSchulist/ghost-job-hunter ghost-job-hunter --demo
 ```
 
 ---
@@ -71,25 +75,22 @@ uvx mcp-mesh stats --db
 | [**`mcp-mesh-ui`**](https://github.com/VanSchulist/mcp-mesh-ui) | **OBSERVABILITY** | Real-time topology visualizer & telemetry dashboard for `mcp-mesh`. Features dark-mode local Web SPA (port 8765, SSE live stream), ANSI terminal TUI, and JSON-RPC inspection drawer. | `Vanilla JS / Web SPA` • **v1.3.0** |
 | [**`mcp-registry-cli`**](https://github.com/VanSchulist/mcp-registry-cli) | **PACKAGE MGR** | Zero-config community package manager & synchronizer for MCP servers across Google Antigravity, Claude Desktop, and Cursor. | `Python CLI` • **v1.1.0** |
 | [**`mcp-mesh-eval`**](https://github.com/VanSchulist/mcp-mesh-eval) | **BENCHMARK** | Frontier benchmark harness evaluating tool selection accuracy, TTFT latency, and Turn-0 token savings across 60 enterprise tools. | `Python Benchmark` • **v1.0.0** |
-| [**`ghost-job-hunter`**](https://github.com/VanSchulist/ghost-job-hunter) | **TACTICAL AGENT** | Autonomous anti-ghost job hunting agent. Features 5 heuristic scoring engines, multi-source live scraping (Hacker News, RemoteOK, WWR), SQLite application ledger, and 1-click email outreach. | `Python / SQLite / MCP` • **v2.1.0** |
-| [**`career-reboot-armor`**](https://github.com/VanSchulist/career-reboot-armor) | **TACTICAL MANUAL** | Publication-grade field manual and portfolio strategy guide for engineers re-entering the tech workforce after caregiving or medical gaps. | `Markdown / Generators` • **Phase 3** |
+| [**`ghost-job-hunter`**](https://github.com/VanSchulist/ghost-job-hunter) | **TACTICAL AGENT** | Deterministic heuristic engine detecting phantom job postings, scraping live hiring feeds, auditing GitHub codebases, and managing a local SQLite opportunity pipeline. | `Python / SQLite / MCP` • **v2.1.0** |
+| [**`career-reboot-armor`**](https://github.com/VanSchulist/career-reboot-armor) | **TACTICAL MANUAL** | Publication-grade field manual and portfolio strategy guide for engineers re-entering the tech workforce after extended leave or caregiving. | `Markdown / DOCX Release` • **v1.0.0** |
 | [**`github-ai-studio`**](https://github.com/VanSchulist/github-ai-studio) | **GOVERNANCE** | Central engineering lab, Architectural Decision Records (ADRs), research tracker, and multi-agent ecosystem governance. | `Architecture Hub` • **Active** |
 
 ---
 
-## 🛠️ Engineering Standards
+## 🛠️ Systems Standards
 
-* 🚀 **Zero External Dependencies**: All core libraries and CLI tools are engineered strictly with the Python standard library (`concurrent.futures`, `json`, `sqlite3`, `http.server`, `urllib`, `re`). Runs anywhere without `pip install` friction.
-* 🧠 **Context-Window Economics**: AI agents should never be forced to parse 50 static schemas at Turn 0. Compact signatures and lazy on-demand resolution save dollars and eliminate tool hallucinations.
-* 🛡️ **Defensive Reliability**: Automated circuit breakers, threaded watchdog timeouts, non-blocking JSON-RPC notification semantics, and 100% passing test suites across ecosystem (159/159 tests passing).
+* 🚀 **Zero External Dependencies**: All core libraries and CLI tools are engineered strictly with the Python standard library. Runs anywhere without `pip install` friction or dependency breakage.
+* 🧠 **Context-Window Discipline**: AI agents should never parse 50 static schemas at Turn 0. Compact signatures and lazy on-demand resolution save API cost and eliminate attention degradation.
+* 🛡️ **Defensive Reliability**: Automated circuit breakers with cooldown timers, non-blocking notification semantics, and 100% passing test suites across ecosystem (161/161 tests passing).
 
 ---
 
 ## 🌐 Links & Contact
 
 * **Official Portal**: [www.existentialcloud.ccwu.cc](https://www.existentialcloud.ccwu.cc)
-* **GitHub Organizations & Repos**: [@VanSchulist](https://github.com/VanSchulist)
+* **GitHub Profile & Repos**: [@VanSchulist](https://github.com/VanSchulist)
 * **License**: All public software released under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-*Crafted with 🖤 by Van Schulist | Existential Cloud AI Studio*
